@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>E‑Commerce App UI Redesign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">Shoply</div>
+      <nav class="nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">Women</a>
+        <a href="#" class="nav-link">Men</a>
+        <a href="#" class="nav-link">Electronics</a>
+        <a href="#" class="nav-link">Sale</a>
+      </nav>
+      <div class="header-actions">
+        <input
+          type="search"
+          class="search"
+          placeholder="Search products, brands..."
+          aria-label="Search products"
+        />
+        <button class="icon-btn" aria-label="View favorites">♡</button>
+        <button class="icon-btn" aria-label="View cart" id="cartButton">
+          🛒<span class="badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main layout -->
+    <main class="main">
+      <!-- Left: filters -->
+      <aside class="filters" aria-label="Filters">
+        <h2 class="filters-title">Filters</h2>
+
+        <section class="filter-group">
+          <h3 class="filter-label">Price</h3>
+          <div class="filter-row">
+            <span>₹0</span>
+            <input type="range" min="0" max="100" value="40" />
+            <span>₹10,000+</span>
+          </div>
+        </section>
+
+        <section class="filter-group">
+          <h3 class="filter-label">Category</h3>
+          <label class="checkbox">
+            <input type="checkbox" checked /> All
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" /> Clothing
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" /> Electronics
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" /> Home & Living
+          </label>
+        </section>
+
+        <section class="filter-group">
+          <h3 class="filter-label">Delivery</h3>
+          <label class="checkbox">
+            <input type="checkbox" /> Same‑day delivery
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" /> Free shipping
+          </label>
+        </section>
+      </aside>
+
+      <!-- Right: content -->
+      <section class="content">
+        <!-- Hero / experiment area -->
+        <section class="hero" aria-label="Experiment section">
+          <div class="hero-copy">
+            <p className="eyebrow">Case Study – UI/UX Redesign</p>
+            <h1>Frictionless checkout for modern e‑commerce.</h1>
+            <p class="hero-subtitle">
+              Redesigned navigation, product discovery, and checkout to reduce cognitive load and
+              increase completion rate in simulated A/B tests.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn" id="primaryCta">Primary CTA (Variant A)</button>
+              <button class="ghost-btn" id="secondaryCta">Secondary CTA (Variant B)</button>
+            </div>
+            <p class="experiment-note">
+              *Buttons above represent two variants used for A/B testing in prototypes.
+            </p>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-label">Simulated satisfaction</span>
+              <span class="metric-value">+30%</span>
+              <span class="metric-caption">after redesign and testing</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Checkout drop‑off</span>
+              <span class="metric-value">‑18%</span>
+              <span class="metric-caption">in prototype flows</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Product grid -->
+        <section class="products" aria-label="Product listing">
+          <header class="products-header">
+            <h2>Recommended for you</h2>
+            <span class="products-meta">Based on recent browsing and wishlist activity</span>
+          </header>
+
+          <div class="product-grid" id="productGrid">
+            <!-- Cards inserted by JS -->
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Simple bottom bar to show UX artifacts -->
+    <footer class="footer">
+      <div class="footer-pill">Personas</div>
+      <div class="footer-pill">Journey map</div>
+      <div class="footer-pill">Usability test notes</div>
+      <div class="footer-pill">A/B test variants</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
